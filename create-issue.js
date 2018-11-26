@@ -10,7 +10,7 @@ const issuingKey = StellarSdk.Keypair.fromSecret('SAKC6MCFJ2IYS7QIJIFBFQNFS6GGDF
 const distributionKey = StellarSdk.Keypair.fromSecret('SAALDUWFQD7AMYAU65TXMJQ5PFEZNHDUWGEG5NHYDKMZVWOSU6DJSAWW');
 
 //asset name must be 4, 12 char -> [a-z][A-Z][0-9]
-const assetName = 'GREEN';
+const assetName = 'BLUE';
 
 //print Acc balance
 const printBalance = async publicKey => {
@@ -47,7 +47,7 @@ const start = async () => {
         const trustline = new StellarSdk.TransactionBuilder(distributionAcc)
         .addOperation(StellarSdk.Operation.changeTrust({
             asset: assetNew, //!! new Asset
-            limit: '1000'
+            limit: '10000'
         }))
         .build()
         trustline.sign(distributionKey)
@@ -58,7 +58,7 @@ const start = async () => {
         .addOperation(StellarSdk.Operation.payment({
             destination: distributionKey.publicKey(),
             asset: assetNew,
-            amount: '100'
+            amount: '1000'
         }))
         .build();
         issuingPayment.sign(issuingKey);
