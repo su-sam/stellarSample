@@ -7,7 +7,7 @@ StellarSdk.Network.useTestNetwork();
 //issuing acc //'secret key'
 const issuingKey = StellarSdk.Keypair.fromSecret('SAKC6MCFJ2IYS7QIJIFBFQNFS6GGDF2YGEZV7MVNAQI63IQSY2ZK7MRC');
 //distribution acc //'secret key'
-const distributionKey = StellarSdk.Keypair.fromSecret('SAYNVRST37VL2Z4VXW3AUET5Y6ULQ5CXVBAISGNS4RIMH5ESKDPPYWY2');
+const distributionKey = StellarSdk.Keypair.fromSecret('SAALDUWFQD7AMYAU65TXMJQ5PFEZNHDUWGEG5NHYDKMZVWOSU6DJSAWW');
 
 //asset name must be 4, 12 char -> [a-z][A-Z][0-9]
 const assetName = 'GREEN';
