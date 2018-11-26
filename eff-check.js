@@ -3,13 +3,6 @@ const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 
 const userId = 'GB76WPMTKS4RCPVJKY3HDVCS64OYGBI5V7G4TUWBLZFGJ65PBR2WEX4E';
 
-const rp = require('request-promise');
-const options = {
-    uri: ' https://horizon-testnet.stellar.org/accounts/GB76WPMTKS4RCPVJKY3HDVCS64OYGBI5V7G4TUWBLZFGJ65PBR2WEX4E/effects',
-    //qs: ,
-    json: true
-  }
-
 server.effects()
   .forAccount(userId)
   .call()
